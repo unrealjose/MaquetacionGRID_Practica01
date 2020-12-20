@@ -1,0 +1,112 @@
+/*Jose Andres Sanchez Perez*/
+
+/*Caracteristicas generales: margenes 0, fuente Font google, tamaño de fuente responsive*/
+
+  /* BOX-SIZING para calcular directamente todas las dimensiones de las cajas */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* RESETEO LIMITADO DE PROPIEDADES margen 0*/
+  h1,
+  h4,
+  div,
+  p {
+    margin: 0px;
+  }
+
+/*Aspecto especifico*/
+  /* classe .container - fuente, color, 80% ancho y centrado*/
+  .container {
+    color: #19b813;
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 10px;
+    grid-template-columns: 10% 30% 30% 30%; 
+    grid-template-rows: 100px 400px 200px 50px;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  /*color de la letra específico*/
+
+  /*La cabecera*/
+  header {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    padding: 10px;
+    text-align: center;
+  }
+
+/* El contenedor grid para la primera fila de contenido .content_wrapper. Dirección, El ajuste,
+ Alineación horizontal, Alineación vertical   */
+
+  /* El menú */
+  nav {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding: 10px;
+  }
+  
+  nav div {
+    margin-bottom: 20px;
+  }
+
+  /* El elemento principal main*/
+  main {
+    border: 1px solid;
+    border-radius: 10px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    justify-self: center;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+  }
+  
+  main img {
+    border-radius: 10px;
+    height: 70%;
+    width: 80%;
+  }
+
+  /* Artículo. Imágenes pequeñas */
+  article {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  article img {
+    border-radius: 10px;
+    height: 60%;
+    width: 100%;
+  }
+  
+  article[class~="articulo"]{
+    justify-self: end;
+    width: 90%;
+  }
+
+
+/* El contenedor grid para la segunda fila de contenido .articles. Dirección, El ajuste,
+ Alineación horizontal, Alineación vertical   */
+
+/* Pie de la página */
+/* El contenedor grid para la tercera fila de contenido footer. Dirección, El ajuste,
+ Alineación horizontal, Alineación vertical   */
+
+ footer {
+  align-items: center;
+  border-top: 1px solid;
+  display: flex;
+  grid-column: 1/5;
+  grid-row: 4/5;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+footer img {
+  width: 50px;
+}
